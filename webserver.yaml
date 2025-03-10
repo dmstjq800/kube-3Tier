@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: web
+  # 컨테이너 정보
+  template:
+    metadata:
+      labels:
+        name: web
+    spec:
+      containers:
+        - name: web-container
+          image: dmstjq800/webserver:1.0 
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 10m

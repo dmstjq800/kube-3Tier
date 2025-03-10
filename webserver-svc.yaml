@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-svc # 도메인처럼 이용가능
+spec:
+  selector:
+    name: web
+  ports:
+    - port: 80
+      targetPort: 80
+    

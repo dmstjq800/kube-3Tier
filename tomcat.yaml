@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: tomcat-deployment
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      name: tomcat
+  # 컨테이너 정보
+  template:
+    metadata:
+      labels:
+        name: tomcat 
+    spec:
+      containers:
+        - name: tomcat-container
+          image: dmstjq800/tomcatserver:1.0 # 이전에 만들었던 도커이미지 사용
+          resources:
+            requests:
+              cpu: 5m
+        
