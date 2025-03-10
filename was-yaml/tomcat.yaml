@@ -16,7 +16,4 @@ spec:
       containers:
         - name: tomcat-container
           image: dmstjq800/tomcatserver:1.0 # 이전에 만들었던 도커이미지 사용
-          resources:
-            requests:
-              cpu: 5m
         

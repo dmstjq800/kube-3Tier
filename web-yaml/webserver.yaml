@@ -18,6 +18,3 @@ spec:
           image: dmstjq800/webserver:1.0 
           ports:
             - containerPort: 80
-          resources:
-            requests:
-              cpu: 10m
